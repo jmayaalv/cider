@@ -1212,7 +1212,7 @@ Buffer names changed are cider-repl and nrepl-server."
                                           (cider-extract-designation-from-current-repl-buffer)))))
   (cider-ensure-connected)
   (let ((new-repl-buffer-name (nrepl-format-buffer-name-template
-                               nrepl-repl-buffer-name-template designation)))
+                               nrepl-repl-bufcifer-name-template designation)))
     (with-current-buffer (cider-current-repl-buffer)
       (rename-buffer new-repl-buffer-name)
       (when nrepl-server-buffer

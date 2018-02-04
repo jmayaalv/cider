@@ -87,7 +87,6 @@ project inference will take place."
 (require 'cider-debug)
 (require 'tramp-sh)
 (require 'cider-repl-history)
-(require 'cider-profile)
 
 (require 'seq)
 

@@ -157,7 +157,7 @@ point, prompts for a var."
   (interactive "P")
   (cider-ensure-op-supported "profile-summary")
   (cider-profile-display-stats
-   (nrepl-send-sync-request (list "op" "profile-summary")))
+   (cider-nrepl-send-sync-request (list "op" "profile-summary")))
   query)
 
 ;;;###autoload
@@ -170,7 +170,7 @@ prefix argument given."
    "Profile-summary for var: "
    (lambda (sym)
      (cider-profile-display-stats
-      (nrepl-send-sync-request
+      (cider-nrepl-send-sync-request
        (list "op" "profile-var-summary"
              "ns" (cider-current-ns)
              "sym" sym)))))
